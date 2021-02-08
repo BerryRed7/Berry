@@ -65,7 +65,6 @@ client.on("message", async message => {
 client.on("ready", () => {
   let activities = [
       `Utilize ${config.prefix}help para obter ajuda`,
-      `servidor do meu criador: https://discord.gg/KJRkCAyhSQ`,
       `${client.guilds.cache.size} servidores!`,
       `prefixo: ${config.prefix}`,
       `${client.users.cache.size} usuários!`,
@@ -74,7 +73,7 @@ client.on("ready", () => {
     ],
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
-        type: "PLAYING"
+        type: "PLAYING" //LISTENING, WATCHING
       }), 1000 * 60); 
   client.user
       .setStatus("online")
@@ -85,4 +84,4 @@ console.log("Estou Online!")
 client.on('message', message => require('./help.js')(client, message));
 
 
-client.login('Nzg2MDM1MTcwMTkyMjYxMTIx.X9AiTA.GfxeDVuGmCNApbEJhIg2sSwR2tg'); //Ligando o Bot caso ele consiga acessar o token
+client.login('SUA TOKEN AQUI'); //Ligando o Bot caso ele consiga acessar o token
